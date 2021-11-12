@@ -11,151 +11,153 @@
 
 
 <script>
-
-    // 1 - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
-    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
-
-    let greeting = 'hello';
-    let title = 'owu';
-    let domain = 'com';
-    let country = 'ua';
-    let a2 = 1;
-    let b = 10;
-    let c = -999;
-    let d = 123;
-    let pi = 3.14;
-    let f = 2.7;
-    let g = 16;
-    let qwe = true;
-    let asd = false;
-
-
-    console.log(greeting);
-    console.log(title);
-    console.log(domain);
-    console.log(country);
-    console.log(a2);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(pi);
-    console.log(f);
-    console.log(g);
-    console.log(qwe);
-    console.log(asd);
-
-    // alert(greeting);
-    // alert(title);
-    // alert(domain);
-    // alert(country);
-    // alert(a2);
-    // alert(b);
-    // alert(c);
-    // alert(d);
-    // alert(pi);
-    // alert(f);
-    // alert(g);
-    // alert(qwe);
-    // alert(asd);
-
-    document.write(greeting);
-    document.write(title);
-    document.write(domain);
-    document.write(country);
-    document.write(a2);
-    document.write(b);
-    document.write(c);
-    document.write(d);
-    document.write(pi);
-    document.write(f);
-    document.write(g);
-    document.write(qwe);
-    document.write(asd);
-
-
-    // 2 - Переприсвоїти кожній змінній з завдання значення на довільне.
-    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
-
-    greeting = 'good day';
-    title = 'everyone';
-    domain = 'prom';
-    country = 'pl';
-    a2 = 2;
-    b = 20;
-    c = -222;
-    d = 111;
-    pi = 3.14159;
-    f = 3.3;
-    g = 20;
-    qwe = 'good';
-    asd = 'bad';
-
-    console.log(greeting);
-    console.log(title);
-    console.log(domain);
-    console.log(country);
-    console.log(a2);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(pi);
-    console.log(f);
-    console.log(g);
-    console.log(qwe);
-    console.log(asd);
-
-    // alert(greeting);
-    // alert(title);
-    // alert(domain);
-    // alert(country);
-    // alert(a);
-    // alert(b);
-    // alert(c);
-    // alert(d);
-    // alert(pi);
-    // alert(f);
-    // alert(g);
-    // alert(qwe);
-    // alert(asd);
-
-    document.write(greeting);
-    document.write(title);
-    document.write(domain);
-    document.write(country);
-    document.write(a2);
-    document.write(b);
-    document.write(c);
-    document.write(d);
-    document.write(pi);
-    document.write(f);
-    document.write(g);
-    document.write(qwe);
-    document.write(asd);
-
-    // 3 - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
-
-    let firstName = 'Oksana';
-    let middleName = 'Mykolaivna';
-    let lastName = 'Kotsur';
-    let person = `${firstName} ${middleName} ${lastName}`
-    console.log(person);
-
-    // 4 - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
-    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
-    let age = 30;
+    // // 1 - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+    // //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+    //
+    // let greeting = 'hello';
+    // let title = 'owu';
+    // let domain = 'com';
+    // let country = 'ua';
+    // let a2 = 1;
+    // let b = 10;
+    // let c = -999;
+    // let d = 123;
+    // let pi = 3.14;
+    // let f = 2.7;
+    // let g = 16;
+    // let qwe = true;
+    // let asd = false;
+    //
+    //
+    // console.log(greeting);
+    // console.log(title);
+    // console.log(domain);
+    // console.log(country);
+    // console.log(a2);
+    // console.log(b);
+    // console.log(c);
+    // console.log(d);
+    // console.log(pi);
+    // console.log(f);
+    // console.log(g);
+    // console.log(qwe);
+    // console.log(asd);
+    //
+    // // alert(greeting);
+    // // alert(title);
+    // // alert(domain);
+    // // alert(country);
+    // // alert(a2);
+    // // alert(b);
+    // // alert(c);
+    // // alert(d);
+    // // alert(pi);
+    // // alert(f);
+    // // alert(g);
+    // // alert(qwe);
+    // // alert(asd);
+    //
+    // document.write(greeting);
+    // document.write(title);
+    // document.write(domain);
+    // document.write(country);
+    // document.write(a2);
+    // document.write(b);
+    // document.write(c);
+    // document.write(d);
+    // document.write(pi);
+    // document.write(f);
+    // document.write(g);
+    // document.write(qwe);
+    // document.write(asd);
+    //
+    //
+    // // 2 - Переприсвоїти кожній змінній з завдання значення на довільне.
+    // //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+    //
+    // greeting = 'good day';
+    // title = 'everyone';
+    // domain = 'prom';
+    // country = 'pl';
+    // a2 = 2;
+    // b = 20;
+    // c = -222;
+    // d = 111;
+    // pi = 3.14159;
+    // f = 3.3;
+    // g = 20;
+    // qwe = 'good';
+    // asd = 'bad';
+    //
+    // console.log(greeting);
+    // console.log(title);
+    // console.log(domain);
+    // console.log(country);
+    // console.log(a2);
+    // console.log(b);
+    // console.log(c);
+    // console.log(d);
+    // console.log(pi);
+    // console.log(f);
+    // console.log(g);
+    // console.log(qwe);
+    // console.log(asd);
+    //
+    // // alert(greeting);
+    // // alert(title);
+    // // alert(domain);
+    // // alert(country);
+    // // alert(a);
+    // // alert(b);
+    // // alert(c);
+    // // alert(d);
+    // // alert(pi);
+    // // alert(f);
+    // // alert(g);
+    // // alert(qwe);
+    // // alert(asd);
+    //
+    // document.write(greeting);
+    // document.write(title);
+    // document.write(domain);
+    // document.write(country);
+    // document.write(a2);
+    // document.write(b);
+    // document.write(c);
+    // document.write(d);
+    // document.write(pi);
+    // document.write(f);
+    // document.write(g);
+    // document.write(qwe);
+    // document.write(asd);
+    //
+    // // 3 - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
+    //
+    // let firstName = 'Oksana'
+    // let middleName = 'Mykolaivna';
+    // let lastName = 'Kotsur';
+    // let person = `${firstName} ${middleName} ${lastName}`
+    // console.log(person);
+    //
+    // // 4 - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    // //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+    // let age = 30;
     // alert(`Вітаю, ${firstName} ${middleName}`);
     // alert(`Тобі ${age} років`);
 
     console.log(`Вітаю, ${firstName} ${middleName}`);
     console.log(`Тобі ${age} років`);
 
-    // confirm(`Вітаю, ${firstName} ${middleName}`);
-    // confirm(`Тобі ${age} років`);
+    confirm(`Вітаю, ${firstName} ${middleName}`);
+    confirm(`Тобі ${age} років`);
+    firstName = prompt('Вітаю, введіть імя', 'name')
+    middleName = 'Mykolaivna';
+    lastName = 'Kotsur';
+    person = `${firstName} ${middleName} ${lastName}`
 
-
-    // 5 - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
-    //     let a = 100; let b = '100'; let c = true;
-
+    // // 5 - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+    // //     let a = 100; let b = '100'; let c = true;
+    //
     let a1 = 100;
     console.log(typeof (a1));
 
@@ -165,9 +167,9 @@
     let c1 = true;
     console.log(typeof (c1));
 
-
-    // 6 - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
-    //     В однакових виразах не використовувати однакові оператори!!!
+    //
+    // // 6 - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+    // //     В однакових виразах не використовувати однакові оператори!!!
     // 5 ? 6 -> true
     let fv = 5;
     let sx = 6;
@@ -219,16 +221,32 @@
     console.log(123 == '123');
 
 
-    // 7 - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+    // // 7 - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
     let str = "20";
     let a = 5;
-    document.write(str + a + "<br/>");
-    document.write(str - a + "<br/>");
+    document.write(str + a + "<br/>"); //a перетворюється на str. і дія не додається, а складується
+    document.write(str - a + "<br/>"); // всі інші дію виконуються
     document.write(str * "2" + "<br/>");
     document.write(str / 2 + "<br/>");
 
 
 
+
+    // 4 - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+
+
+
+
+    let firstName = prompt(`Введіть ваше ім'я`);
+    console.log(firstName);
+    let middleName = prompt(`Введіть ваше по-батькові`);
+    console.log(middleName);
+    console.log(`Вітаю`, firstName + middleName);
+
+    let age = prompt('Скільки тобі років?');
+
+    console.log(`Тобі ${age} років`);
 
 
 
