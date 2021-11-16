@@ -107,22 +107,22 @@ console.log(array);
 
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
              //1
-// let i = array.length;
-//  while (i > 0 ) {
+// let i = array.length-1;
+//  while (i >= 0 ) {
 //
 //      console.log(array [i])
 //
 //      i--;
 //  }
                   //2
-// for (let  i = array.length; i > 0 ; i--) {
+// for (let  i = array.length-1; i >= 0 ; i--) {
 //
 //     console.log(array [i])
 // }
                //3
-// let i = array.length;
+// let i = array.length-1;
 //
-// while (i > 0) {
+// while (i >= 0) {
 //
 //     if (i % 2 !== 0 ) {
 //
@@ -131,24 +131,24 @@ console.log(array);
 //
 //     i--
 // }
-           //4
-// for (let  i = array.length; i > 0 ; i--) {
+//            //4
+// for (let  i = array.length-1; i >= 0 ; i--) {
 //
 //     if (i % 2 !== 0) {
 //         console.log(array [i])
 //     }
 // }
            //5
-// let i = array.length;
+// let i = array.length-1;
 //
-// while (i > 0 ) {
+// while (i >= 0 ) {
 //     if (array[i] % 2 === 0) {
 //         console.log(array[i])
 //     }
 //     i--
 // }
              //6
-// for (let i = array.length; i > 0; i--) {
+// for (let i = array.length-1; i >= 0; i--) {
 //
 //     if (array[i] % 2 === 0){
 //         console.log(array[i])
@@ -158,7 +158,7 @@ console.log(array);
 
         //7
 
-// for (let i = array.length; i > 0; i--){
+// for (let i = array.length-1; i >= 0; i--){
 //     if (array[i] % 3 === 0){
 //         array[i] = "okten"
 //         console.log(array[i])
@@ -166,3 +166,4 @@ console.log(array);
 //     console.log(array)
 //
 // }
+
