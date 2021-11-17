@@ -1,0 +1,14 @@
+
+.users-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+.user-block {
+    width: 50%
+
+}

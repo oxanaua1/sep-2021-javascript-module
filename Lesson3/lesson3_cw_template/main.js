@@ -146,3 +146,5 @@ let simpsons = [
 //
 //
 // }
+
+document.write()
