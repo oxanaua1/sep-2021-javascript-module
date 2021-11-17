@@ -609,11 +609,11 @@ for (let user of usersArrow) {
     
     document.write(`<div class="post-card">
          <h3>
-            ${user["id"]} -
-            ${user["title"]} 
+            ${user.id} -
+            ${user.title} 
          </h3>
           <p>
-          ${user["body"]}
+          ${user.body}
         </p>
     
     </div>`)

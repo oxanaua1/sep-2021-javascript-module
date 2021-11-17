@@ -243,13 +243,13 @@ for (let user of usersList) {
 
     document.write(`<div class="user-block">
 
-        <h2>${user["id"]} -
-            ${user["name"]} -
-            ${user["username"]}
+        <h2>${user.id} -
+            ${user.name} -
+            ${user.username}
         </h2>
         <h3>
-            ${user["email"]} -
-            ${user["phone"]}
+            ${user.email} -
+            ${user.phone}
         </h3>
 
     <div class="address-block">
