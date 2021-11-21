@@ -6,7 +6,7 @@
 // for (let i = 0; i < 50; i++) {
 //
 //     if (i %2 === 0){
-//         console.log([i])
+//         console.log([i]);
 //     }
 //
 // }
@@ -16,7 +16,7 @@
 // for (let i = 0; i < 50; i++) {
 //
 //     if (i%2 !== 0){
-//         console.log(i)
+//         console.log(i);
 //     }
 //
 // }
@@ -30,7 +30,7 @@
 //
 // oneArrow [0] = Math.floor(Math.random()*10)
 //
-//     console.log(oneArrow)
+//     console.log(oneArrow);
 //
 //
 // }
@@ -42,7 +42,7 @@
 //
 // oneArrow = Math.floor(Math.random()*(732-8)+8)
 //
-//     console.log(oneArrow)
+//     console.log(oneArrow);
 //
 // }
 
@@ -54,7 +54,7 @@
 //
 //
 //     if (i % 3 === 0 ) {
-//         console.log(array[i])
+//         console.log(array[i]);
 //     }
 //
 // }
@@ -68,7 +68,7 @@
 //
 //     if (i % 3 === 0){
 //         if (array[i] % 2 === 0){
-//             console.log(array[i])
+//             console.log(array[i]);
 //         }
 //     }
 //
@@ -84,8 +84,8 @@
 //         if (array[i] % 2 ===0 ){
 //             array2 = array
 //
-//             console.log(array[i])
-//             console.log(array2[i])
+//             console.log(array[i]);
+//             console.log(array2[i]);
 //
 //         }
 //     }
@@ -100,7 +100,7 @@
 // for (let i = 0; i < example.length; i++) {
 //
 //     if (example[i] % 2 === 0) {
-//         console.log(example[i - 1])
+//         console.log(example[i - 1]);
 //     }
 //
 // }
@@ -118,9 +118,9 @@
 //     sum = sum + array[i]
 //     avr = sum / array.length
 // }
-//     console.log(sum)
+//     console.log(sum);
 //
-//     console.log(avr)
+//     console.log(avr);
 
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
 
@@ -131,8 +131,8 @@
 //     array = Math.round(Math.random()*10);
 //     arrayNew = array * 5
 //
-//     console.log(array)
-//     console.log(arrayNew)
+//     console.log(array);
+//     console.log(arrayNew);
 // }
 //
 
@@ -148,7 +148,7 @@
 //     if (typeof array [i]  === "number") {
 //         let arrayNew = array[i];
 //
-//         console.log(arrayNew)
+//         console.log(arrayNew);
 //         }
 // }
 
@@ -209,7 +209,7 @@
 //         }
 //
 //     }
-//     console.log(usersWithIdElement)
+//     console.log(usersWithIdElement);
 // }
 
 // 10 - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
@@ -218,7 +218,7 @@
 //
 //     for (let i = 0; i < array.length; i++) {
 //      if (array[i] % 2 === 0) {
-//          console.log(array[i])
+//          console.log(array[i]);
 //      }
 //     }
 //
@@ -235,38 +235,45 @@
 //
 //     arrayNew[i] = array[i];
 //
-//     console.log(arrayNew[i])
+//     console.log(arrayNew[i]);
 // }
 
 
 // 12 - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-//
+
 // let  array = [ 'a', 'b', 'c'];
-//
+// let sum = '';
 // for (let i = 0; i < array.length; i++) {
 //
-//     array[i]
+//
+//    sum = sum + array[i]
 //
 // }
-// console.log(array)
+// console.log(sum);
 
 
 // 13 - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+
+
 // let  array = [ 'a', 'b', 'c'];
-//
+// let sum = '';
 // i = 0;
-// while (i < array.length) {
-//     array[i]
+//  while (i < array.length) {
+//
+//
+//   sum = sum + array[i];
+//
 //     i++
+//
 // }
-// console.log(array)
+// console.log(sum);
 
 // 14 - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
 
 // let  array = [ 'a', 'b', 'c'];
+// let sum = '';
 // for (let element of array) {
+//   sum = sum + element[0];
 //
-//
-//     array[element]
 // }
-// console.log(array)
+// console.log(sum);
