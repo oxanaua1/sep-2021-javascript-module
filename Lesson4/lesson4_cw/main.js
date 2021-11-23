@@ -1,13 +1,13 @@
 //1 - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
 //     function minNumner(a, b, c){
-//     if (a < b && a < c){
-//         console.log(a)
-//     }else if (b < a && b < c){
-//         console.log(b)
-//     } else if (c < a && c < b){
-//         console.log(c)
-//     }else{
-//     }
+    //     if (a < b && a < c){
+    //         console.log(a)
+    //     }else if (b < a && b < c){
+    //         console.log(b)
+    //     } else if (c < a && c < b){
+    //         console.log(c)
+    //     }else{
+    //     }
 //
 //  }
 //
