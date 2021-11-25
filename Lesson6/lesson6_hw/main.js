@@ -52,13 +52,13 @@
 // 6 - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
 // document.writeln(delete_characters(str, 7)); // Каждый
-// let str = 'Каждый охотник желает знать';
-//
-// let delete_characters = (str, length) => {
-//     return str.slice(length)
-// }
-// document.write(delete_characters(str, 7));
-//
+let str = 'Каждый охотник желает знать';
+
+let delete_characters = (str, length1, length2) => {
+    return str.slice(length1,length2)
+}
+document.write(delete_characters(str, 0, 6));
+
 
 
 // 7 - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами.
