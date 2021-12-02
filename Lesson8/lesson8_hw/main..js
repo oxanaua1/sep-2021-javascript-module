@@ -1,22 +1,23 @@
-//// Візьміть файл template1.html, підключіть до нього скрипт, і працюйте в ньому!
-//// - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName
+// Візьміть файл template1.html, підключіть до нього скрипт, і працюйте в ньому!
+// - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName
 // або document.getElementsByTagName :
-//// -- отримує текст з параграфа з id "content"
-// let elementByIdContent = document.getElementById("content");
-// console.log(elementByIdContent);
-// //// -- отримує текст з блоку з id "rules"
-//
-// let elementByIdRules = document.getElementById("rules");
-// console.log(elementByIdRules);
-//
-// //// -- замініть текст параграфа з id 'content' на будь-який інший
-// elementByIdContent.innerText = "Lorem XXXXX ipsum dolor sit amet, consectetur adipisicing elit."
-// console.log(elementByIdContent);
-//
-// //// -- замініть текст параграфа з id 'rules' на будь-який інший
-// elementByIdRules.innerText = "Уран — сьома від Сонця велика планета Сонячної системи, належить до планет-гігантів."
-// console.log(elementByIdRules.innerText);
-//// -- змініть кожному елементу колір фону на червоний
+// -- отримує текст з параграфа з id "content"
+let elementByIdContent = document.getElementById("content");
+
+console.log(elementByIdContent.textContent);
+//// -- отримує текст з блоку з id "rules"
+
+let elementByIdRules = document.getElementById("rules");
+console.log(elementByIdRules.textContent);
+
+//// -- замініть текст параграфа з id 'content' на будь-який інший
+elementByIdContent.innerText = "Lorem XXXXX ipsum dolor sit amet, consectetur adipisicing elit."
+console.log(elementByIdContent);
+
+//// -- замініть текст параграфа з id 'rules' на будь-який інший
+elementByIdRules.innerText = "Уран — сьома від Сонця велика планета Сонячної системи, належить до планет-гігантів."
+console.log(elementByIdRules.innerText);
+// -- змініть кожному елементу колір фону на червоний
 
 let elementByIdNameContent = document.getElementById("content");
 elementByIdNameContent.style.background = "red"
