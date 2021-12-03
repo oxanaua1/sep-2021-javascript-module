@@ -215,12 +215,13 @@ for (const rule of rules) {
     let h2Title= document.createElement('h2');
     let pBody= document.createElement('p');
 
-    divWrap.appendChild(divRule);
-    divRule.appendChild(h2Title);
-    divRule.appendChild(pBody);
 
     h2Title.innerText = rule.title;
     pBody.innerText = rule.body;
+
+    divWrap.appendChild(divRule);
+    divRule.appendChild(h2Title);
+    divRule.appendChild(pBody);
 
 
 }
