@@ -1,0 +1,20 @@
+.wrap  {
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.post {
+    margin: 10px;
+    width: 200px;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+}
+
+.idNum {
+    font-size: x-large;
+    padding-left: 80px;
+}
+
+
