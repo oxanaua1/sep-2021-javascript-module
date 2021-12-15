@@ -1,0 +1,11 @@
+.post {
+    margin: 10px;
+    background: magenta;
+    padding: 10px;
+}
+
+.comment {
+    margin: 10px;
+    background: lightblue;
+
+}
