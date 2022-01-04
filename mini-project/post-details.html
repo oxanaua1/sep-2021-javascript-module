@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post-details</title>
+</head>
+<body>
+
+<script>
+    let urlParam = new URLSearchParams(window.location.search);
+    // let postParam = urlParam.get('Post_Id');
+    let userParam = urlParam.get('User_Id');
+
+
+    // /${postParam}
+    // console.log(postParam);
+    console.log(userParam);
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${userParam}`)
+        .then(user => user.json())
+        .then(user => {
+
+            let divContainer = document.createElement('div');
+            let h2Id = document.createElement('h2');
+            let h3Name = document.createElement('h3');
+            let h4UserName = document.createElement('h4');
+            let divEmail = document.createElement('div');
+            let divAddress = document.createElement('div');
+            let divStreet = document.createElement('div');
+            let divSuite = document.createElement("div");
+            let divCity = document.createElement("div");
+            let divZipcode = document.createElement("div");
+            let divGeo = document.createElement("div");
+            let divLat = document.createElement("div");
+            let divLng = document.createElement("div");
+            let divPhone = document.createElement("div");
+            let divWebsite = document.createElement("div");
+            let divCompany = document.createElement("div");
+            let divCompanyName = document.createElement("div");
+            let divCatchPhrase = document.createElement("div");
+            let divBs = document.createElement("div");
+
+            h2Id.innerText = user.id;
+            h3Name.innerText = user.name;
+            h4UserName.innerText = user.username;
+            divEmail.innerText = user.email;
+            divStreet.innerText = user.address.street;
+            divSuite.innerText = user.address.suite;
+            divCity.innerText = user.address.city;
+            divZipcode.innerText = user.address.zipcode;
+            divLat.innerText = user.address.geo.lat;
+            divLng.innerText = user.address.geo.lng;
+            divPhone.innerText = user.phone;
+            divWebsite.innerText = user.website;
+            divCompanyName.innerText = user.company.name;
+            divCatchPhrase.innerText = user.company.catchPhrase;
+            divBs.innerText = user.company.bs;
+
+            document.body.appendChild(divContainer);
+            divContainer.append(h2Id, h3Name, h4UserName, divEmail, divAddress);
+            divAddress.append(divStreet, divSuite, divCity, divZipcode, divGeo);
+            divGeo.append(divLat, divLng);
+            divContainer.append(divPhone, divWebsite, divCompany);
+            divCompany.append(divCompanyName, divCatchPhrase, divBs);
+
+
+            console.log(divContainer);
+
+
+        });
+
+
+    fetch(`https://jsonplaceholder.typicode.com/posts/${userParam}/comments`)
+        .then(comments => comments.json())
+        .then(comments => {
+            console.log(comments);
+
+            // for (const comment of comments) { }  ??????????????
+
+                let commentsWrap = document.createElement('div');
+                let commentsId = document.createElement('h3');
+                let commentsTitle = document.createElement('h2');
+                let commentsBody = document.createElement('p');
+
+                commentsId.innerText = comments.id;
+                commentsTitle.innerText = comments.title;
+                commentsBody.innerText = comments.body;
+
+                document.body.appendChild(commentsWrap);
+                commentsWrap.append(commentsId, commentsTitle, commentsBody);
+
+
+
+
+        });
+
+
+</script>
+
+
+</body>
+</html>

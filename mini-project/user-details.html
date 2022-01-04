@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user-detailes</title>
+</head>
+<body>
+
+<script>
+
+    let urlParam = new URLSearchParams(window.location.search);
+    let userParam = urlParam.get('User_Id');
+    console.log(userParam);
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${userParam}`)
+        .then(user => user.json())
+        .then(user => {
+
+            let divContainer = document.createElement('div');
+            let h2Id = document.createElement('h2');
+            let h3Name = document.createElement('h3');
+            let h4UserName = document.createElement('h4');
+            let divEmail = document.createElement('div');
+            let divAddress = document.createElement('div');
+            let divStreet = document.createElement('div');
+            let divSuite = document.createElement("div");
+            let divCity = document.createElement("div");
+            let divZipcode = document.createElement("div");
+            let divGeo = document.createElement("div");
+            let divLat = document.createElement("div");
+            let divLng = document.createElement("div");
+            let divPhone = document.createElement("div");
+            let divWebsite = document.createElement("div");
+            let divCompany = document.createElement("div");
+            let divCompanyName = document.createElement("div");
+            let divCatchPhrase = document.createElement("div");
+            let divBs = document.createElement("div");
+
+            h2Id.innerText = user.id;
+            h3Name.innerText = user.name;
+            h4UserName.innerText = user.username;
+            divEmail.innerText = user.email;
+            divStreet.innerText = user.address.street;
+            divSuite.innerText = user.address.suite;
+            divCity.innerText = user.address.city;
+            divZipcode.innerText = user.address.zipcode;
+            divLat.innerText = user.address.geo.lat;
+            divLng.innerText = user.address.geo.lng;
+            divPhone.innerText = user.phone;
+            divWebsite.innerText = user.website;
+            divCompanyName.innerText = user.company.name;
+            divCatchPhrase.innerText = user.company.catchPhrase;
+            divBs.innerText = user.company.bs;
+
+            document.body.appendChild(divContainer);
+            divContainer.append(h2Id, h3Name, h4UserName, divEmail, divAddress);
+            divAddress.append(divStreet, divSuite, divCity, divZipcode, divGeo);
+            divGeo.append(divLat, divLng);
+            divContainer.append(divPhone, divWebsite, divCompany);
+            divCompany.append(divCompanyName, divCatchPhrase, divBs);
+
+
+            console.log(divContainer);
+
+
+        });
+
+
+    let button = document.createElement('button');
+    button.innerText = 'post of current user';
+    document.body.append(button);
+
+
+    button.onclick = function () {
+
+        fetch(`https://jsonplaceholder.typicode.com/users/${userParam}/posts`)
+            .then(posts => posts.json())
+            .then(posts => {
+                console.log(posts);
+
+                for (const post of posts) {
+
+
+                    let wrapDiv = document.createElement('div');
+
+                    let divPost = document.createElement('div');
+                    let idDiv = document.createElement('div');
+                    let titleH3 = document.createElement('h3');
+                    let bodyDiv = document.createElement('p');
+                    let buttonPost = document.createElement('button');
+
+                    idDiv.innerText = post.id;
+                    titleH3.innerText = post.title;
+                    bodyDiv.innerText = post.body;
+                    buttonPost.innerText = 'post-details';
+
+                    document.body.appendChild(wrapDiv);
+                    wrapDiv.appendChild(divPost);
+                    divPost.append(idDiv, titleH3, bodyDiv, buttonPost);
+
+
+                    buttonPost.onclick = function () {
+
+
+                        location.href = `http://localhost:63342/sep-2021-javascript-module/mini-project/post-details.html?User_Id=${userParam}?Post_Id=${post.id}`;
+
+                    }
+
+
+                }
+
+            });
+
+
+    };
+
+
+</script>
+
+
+</body>
+</html>
