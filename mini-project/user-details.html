@@ -63,57 +63,52 @@
             console.log(divContainer);
 
 
+            let button = document.createElement('button');
+            button.innerText = 'post of current user';
+            document.body.append(button);
+
+
+            button.onclick = function () {
+
+                fetch(`https://jsonplaceholder.typicode.com/users/${userParam}/posts`)
+                    .then(posts => posts.json())
+                    .then(posts => {
+                        console.log(posts);
+
+                        for (const post of posts) {
+
+
+                            let wrapDiv = document.createElement('div');
+
+                            let divPost = document.createElement('div');
+                            let idDiv = document.createElement('div');
+                            let titleH3 = document.createElement('h3');
+                            let buttonPost = document.createElement('button');
+
+                            idDiv.innerText = post.id;
+                            titleH3.innerText = post.title;
+                            buttonPost.innerText = 'post-details';
+
+                            document.body.appendChild(wrapDiv);
+                            wrapDiv.appendChild(divPost);
+                            divPost.append(idDiv, titleH3, buttonPost);
+
+
+                            buttonPost.onclick = function () {
+
+
+                                location.href = `http://localhost:63342/sep-2021-javascript-module/mini-project/post-details.html?Post_Id=${post.id}`;
+
+                            }
+
+
+                        }
+
+                    });
+
+
+            };
         });
-
-
-    let button = document.createElement('button');
-    button.innerText = 'post of current user';
-    document.body.append(button);
-
-
-    button.onclick = function () {
-
-        fetch(`https://jsonplaceholder.typicode.com/users/${userParam}/posts`)
-            .then(posts => posts.json())
-            .then(posts => {
-                console.log(posts);
-
-                for (const post of posts) {
-
-
-                    let wrapDiv = document.createElement('div');
-
-                    let divPost = document.createElement('div');
-                    let idDiv = document.createElement('div');
-                    let titleH3 = document.createElement('h3');
-                    let bodyDiv = document.createElement('p');
-                    let buttonPost = document.createElement('button');
-
-                    idDiv.innerText = post.id;
-                    titleH3.innerText = post.title;
-                    bodyDiv.innerText = post.body;
-                    buttonPost.innerText = 'post-details';
-
-                    document.body.appendChild(wrapDiv);
-                    wrapDiv.appendChild(divPost);
-                    divPost.append(idDiv, titleH3, bodyDiv, buttonPost);
-
-
-                    buttonPost.onclick = function () {
-
-
-                        location.href = `http://localhost:63342/sep-2021-javascript-module/mini-project/post-details.html?User_Id=${userParam}?Post_Id=${post.id}`;
-
-                    }
-
-
-                }
-
-            });
-
-
-    };
-
 
 </script>
 
