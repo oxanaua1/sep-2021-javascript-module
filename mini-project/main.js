@@ -29,23 +29,28 @@ fetch('https://jsonplaceholder.typicode.com/users')
         console.log(value);
         let users = value;
         let wrapper = document.createElement('div');
+        wrapper.classList.add('indexWrapper');
+
         document.body.appendChild(wrapper);
 
 
         for (const user of users) {
 
             let userDiv = document.createElement('div');
+
             let userH2 = document.createElement("h2");
             let userH3 = document.createElement("h3");
             let userBtn = document.createElement('button');
 
+            userDiv.classList.add('userContainer');
+            userBtn.classList.add('indexBtn')
 
             userH2.innerText = `User Id: ${user.id}`;
-            userH3.innerText = user.name;
-            userBtn.innerText = `user-details`;
+            userH3.innerText = `Name & Surname: ${user.name}`;
+            userBtn.innerText = `User details`;
 
 
-            document.body.appendChild(userDiv);
+            wrapper.appendChild(userDiv);
             userDiv.append(userH2, userH3, userBtn);
 
 

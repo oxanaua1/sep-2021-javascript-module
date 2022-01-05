@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>user-detailes</title>
 </head>
 <body>
@@ -36,21 +37,22 @@
             let divCatchPhrase = document.createElement("div");
             let divBs = document.createElement("div");
 
-            h2Id.innerText = user.id;
-            h3Name.innerText = user.name;
-            h4UserName.innerText = user.username;
-            divEmail.innerText = user.email;
-            divStreet.innerText = user.address.street;
-            divSuite.innerText = user.address.suite;
-            divCity.innerText = user.address.city;
-            divZipcode.innerText = user.address.zipcode;
-            divLat.innerText = user.address.geo.lat;
-            divLng.innerText = user.address.geo.lng;
-            divPhone.innerText = user.phone;
-            divWebsite.innerText = user.website;
-            divCompanyName.innerText = user.company.name;
-            divCatchPhrase.innerText = user.company.catchPhrase;
-            divBs.innerText = user.company.bs;
+            h2Id.innerText = `User Id - ${user.id}`;
+            h3Name.innerText = `Name & Surname: ${user.name}`;
+            h4UserName.innerText = `User Name: ${user.username}`;
+            divEmail.innerText = `email: ${user.email}`;
+            divAddress.innerText = `Address: `;
+            divStreet.innerText = `street: ${user.address.street}`;
+            divSuite.innerText = `suite: ${user.address.suite}`;
+            divCity.innerText = `city: ${user.address.city}`;
+            divZipcode.innerText = `zipcode: ${user.address.zipcode}`;
+            divLat.innerText = `geo.lat: ${user.address.geo.lat}`;
+            divLng.innerText = `geo.lng: ${user.address.geo.lng}`;
+            divPhone.innerText = `phone: ${user.phone}`;
+            divWebsite.innerText = `website: ${user.website}`;
+            divCompanyName.innerText = `Company Name: ${user.company.name}`;
+            divCatchPhrase.innerText = `Company Catch Phrase: ${user.company.catchPhrase}`;
+            divBs.innerText = `Company BS: ${user.company.bs}`;
 
             document.body.appendChild(divContainer);
             divContainer.append(h2Id, h3Name, h4UserName, divEmail, divAddress);
