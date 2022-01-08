@@ -9,8 +9,12 @@
 
 <script>
     let urlParam = new URLSearchParams(window.location.search);
-
     let postParam = urlParam.get('Post_Id');
+
+    let wrapperPostDetails = document.createElement('div');
+    wrapperPostDetails.classList.add('postDetailsWrapper');
+
+    document.body.appendChild(wrapperPostDetails);
 
     console.log(postParam);
 
@@ -19,26 +23,32 @@
         .then(post => post.json())
         .then(post => {
             console.log(post);
-            let wrapDiv = document.createElement('div');
-
+            let containerPostBody = document.createElement('div');
             let divPost = document.createElement('div');
-            let idDiv = document.createElement('div');
+            let idH2 = document.createElement('h2');
             let titleH3 = document.createElement('h3');
             let bodyP = document.createElement('p');
             let buttonPost = document.createElement('button');
 
-            idDiv.innerText = post.id;
+            containerPostBody.classList.add('postDetailsContainer');
+
+            idH2.innerText = `Post id - ${post.id}`;
             titleH3.innerText = post.title;
             bodyP.innerText = post.body;
 
 
-            document.body.appendChild(wrapDiv);
-            wrapDiv.appendChild(divPost);
-            divPost.append(idDiv, titleH3, bodyP);
+            wrapperPostDetails.appendChild(containerPostBody);
+            containerPostBody.appendChild(divPost);
+            divPost.append(idH2, titleH3, bodyP);
 
 
         });
 
+
+    let wrapContainerComments = document.createElement('div');
+    wrapContainerComments.classList.add('postDetailsWrapContainerComments');
+
+    document.body.appendChild(wrapContainerComments);
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${postParam}/comments`)
         .then(comments => comments.json())
@@ -47,22 +57,25 @@
 
             for (const comment of comments) {
 
-                let commentsWrap = document.createElement('div');
+                let containerComments = document.createElement('div');
                 let commentsId = document.createElement('h3');
                 let commentsPostId = document.createElement('h3');
                 let commentsEmail = document.createElement('h4');
                 let commentsName = document.createElement('h2');
                 let commentsBody = document.createElement('p');
 
+
+                containerComments.classList.add('postDetailsCommentsContainer')
+
                 commentsId.innerText = `Comment Id: ${comment.id}`;
-                commentsPostId.innerText = `Post Id: ${comment.postId}`;
                 commentsEmail.innerText = `e-mail: ${comment.email}`;
                 commentsName.innerText = comment.name;
                 commentsBody.innerText = comment.body;
 
 
-                document.body.appendChild(commentsWrap);
-                commentsWrap.append(commentsId,commentsPostId, commentsEmail, commentsName, commentsBody);
+
+                wrapContainerComments.appendChild(containerComments);
+                containerComments.append(commentsId, commentsPostId, commentsEmail, commentsName, commentsBody);
             }
 
 

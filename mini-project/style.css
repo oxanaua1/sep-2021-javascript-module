@@ -1,4 +1,7 @@
-.indexWrapper {
+.indexWrapper,
+.userDetailsWrapper,
+.userDetailsWrapperPost,
+.postDetailsWrapper {
     display: flex;
     width: 1200px;
     justify-content: center;
@@ -6,6 +9,7 @@
 
 
 }
+
 .userContainer {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,7 @@
     margin: 10px;
 
 }
+
 .indexBtn {
     background: lemonchiffon;
     width: 100px;
@@ -24,4 +29,82 @@
     border-radius: 10px;
     border: none;
     font-size: 15px;
+}
+
+
+.userDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background: lightblue;
+    font-size: 20px;
+}
+
+.userDetailsButton {
+    background: cornflowerblue;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.userDetailsMainContent {
+    margin: 30px;
+    padding: 20px;
+    background: lightcyan;
+}
+
+.userDetailsPostContainer {
+    background: lightcyan;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+
+
+}
+
+.userDetailsButtonPost {
+    background: cornflowerblue;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.postDetailsContainer {
+    margin: 30px;
+    padding: 20px;
+    background: lightskyblue;
+
+}
+
+.postDetailsWrapContainerComments {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 1200px;
+
+
+}
+
+.postDetailsCommentsContainer {
+    width: 220px;
+    background: lightcyan;
+    padding: 20px;
+
+
 }

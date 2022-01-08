@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>user-detailes</title>
+    <title>user-details</title>
 </head>
 <body>
 
@@ -13,6 +13,11 @@
     let userParam = urlParam.get('User_Id');
     console.log(userParam);
 
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('userDetailsWrapper');
+
+    document.body.appendChild(wrapper);
+
     fetch(`https://jsonplaceholder.typicode.com/users/${userParam}`)
         .then(user => user.json())
         .then(user => {
@@ -21,6 +26,7 @@
             let h2Id = document.createElement('h2');
             let h3Name = document.createElement('h3');
             let h4UserName = document.createElement('h4');
+            let mainContent = document.createElement('div')
             let divEmail = document.createElement('div');
             let divAddress = document.createElement('div');
             let divStreet = document.createElement('div');
@@ -36,6 +42,12 @@
             let divCompanyName = document.createElement("div");
             let divCatchPhrase = document.createElement("div");
             let divBs = document.createElement("div");
+            let button = document.createElement('button');
+
+            divContainer.classList.add('userDetailsContainer');
+            button.classList.add('userDetailsButton');
+            mainContent.classList.add('userDetailsMainContent')
+
 
             h2Id.innerText = `User Id - ${user.id}`;
             h3Name.innerText = `Name & Surname: ${user.name}`;
@@ -53,24 +65,26 @@
             divCompanyName.innerText = `Company Name: ${user.company.name}`;
             divCatchPhrase.innerText = `Company Catch Phrase: ${user.company.catchPhrase}`;
             divBs.innerText = `Company BS: ${user.company.bs}`;
+            button.innerText = 'post of current user';
 
-            document.body.appendChild(divContainer);
-            divContainer.append(h2Id, h3Name, h4UserName, divEmail, divAddress);
+            document.body.appendChild(wrapper);
+            wrapper.append(divContainer, button);
+            divContainer.append(h2Id, h3Name, h4UserName, mainContent);
+            mainContent.append(divEmail, divAddress, divGeo, divPhone, divWebsite, divCompany)
             divAddress.append(divStreet, divSuite, divCity, divZipcode, divGeo);
             divGeo.append(divLat, divLng);
-            divContainer.append(divPhone, divWebsite, divCompany);
             divCompany.append(divCompanyName, divCatchPhrase, divBs);
 
 
             console.log(divContainer);
 
 
-            let button = document.createElement('button');
-            button.innerText = 'post of current user';
-            document.body.append(button);
-
-
             button.onclick = function () {
+                let wrapperPost = document.createElement('div');
+                wrapperPost.classList.add('userDetailsWrapperPost');
+
+                document.body.appendChild(wrapperPost);
+
 
                 fetch(`https://jsonplaceholder.typicode.com/users/${userParam}/posts`)
                     .then(posts => posts.json())
@@ -80,26 +94,29 @@
                         for (const post of posts) {
 
 
-                            let wrapDiv = document.createElement('div');
+                            let containerPostDiv = document.createElement('div');
 
                             let divPost = document.createElement('div');
                             let idDiv = document.createElement('div');
-                            let titleH3 = document.createElement('h3');
+                            let titleH3 = document.createElement('h4');
                             let buttonPost = document.createElement('button');
 
-                            idDiv.innerText = post.id;
+                            idDiv.innerText = `Post id: ${post.id}`;
                             titleH3.innerText = post.title;
                             buttonPost.innerText = 'post-details';
 
-                            document.body.appendChild(wrapDiv);
-                            wrapDiv.appendChild(divPost);
-                            divPost.append(idDiv, titleH3, buttonPost);
+                            containerPostDiv.classList.add('userDetailsPostContainer');
+                            buttonPost.classList.add('userDetailsButtonPost')
+
+                            wrapperPost.appendChild(containerPostDiv);
+                            containerPostDiv.append(divPost, buttonPost);
+                            divPost.append(idDiv, titleH3);
 
 
                             buttonPost.onclick = function () {
 
 
-                                location.href = `http://localhost:63342/sep-2021-javascript-module/mini-project/post-details.html?Post_Id=${post.id}`;
+                                location.href = `post-details.html?Post_Id=${post.id}`;
 
                             }
 
