@@ -21,7 +21,8 @@
 // user-details.html - блок с информацией про user вверху страницы. Кнопка ниже, на 90% ширины страницы, по центру.
 // блоки с краткой информацией про post - в ряд по 5 объектов.
 // post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.
-// Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
+// Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так,
+// что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(value => value.json())
@@ -55,7 +56,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
             userBtn.onclick = function () {
-                location.href = `http://localhost:63342/sep-2021-javascript-module/mini-project/user-details.html?User_Id=${user.id}`;
+                location.href = `user-details.html?User_Id=${user.id}`;
 
 
             }
